@@ -1,8 +1,9 @@
-from PySide6.QtWidgets import QApplication, QMainWindow
+from PySide6.QtWidgets import QApplication, QMainWindow, QDialog
 from PySide6 import QtCore
 from PySide6.QtCore import Qt
 
 from Distribuicao.Standalone.GUI.login_w import Ui_MainWindow
+from Distribuicao.Standalone.infra.connector_LogarUser import LogarUser
 
 
 class ui_Login(QMainWindow):
@@ -42,9 +43,21 @@ class ui_Login(QMainWindow):
     def minimizeWindow(self):
         self.showMinimized()
 
-    def loginUser(self) -> bool:
-        self
+    def loginUser(self):
+        user = self.ui.user_login.text()
+        password = self.ui.pass_login.text()
 
+        logIn = LogarUser.logarUser(user, password)
+
+        if logIn:
+            diag = QDialog(self)
+            diag.setWindowTitle("Usuário validado")
+            diag.exec()
+
+        else:
+            diag = QDialog(self)
+            diag.setWindowTitle("Falha ao validar usuário")
+            diag.exec()
     # </editor-fold>
 
 
