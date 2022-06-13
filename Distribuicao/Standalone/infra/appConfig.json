@@ -1,0 +1,11 @@
+{
+  "connectionString" :
+  [
+    {
+      "Host" : "localhost",
+      "Database" : "ponto_facil_db",
+      "User" : "root",
+      "Password" : ""
+    }
+  ]
+}
