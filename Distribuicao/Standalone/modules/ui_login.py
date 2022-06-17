@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QApplication, QMainWindow, QDialog
+from PySide6.QtWidgets import QApplication, QMainWindow, QDialog, QMessageBox
 from PySide6 import QtCore
 from PySide6.QtCore import Qt
 
@@ -50,14 +50,14 @@ class ui_Login(QMainWindow):
         logIn = LogarUser.logarUser(user, password)
 
         if logIn:
-            diag = QDialog(self)
-            diag.setWindowTitle("Usuário validado")
-            diag.exec()
+            MessageBox = QMessageBox(self)
+            MessageBox.setWindowTitle("Usuário validado")
+            MessageBox.exec()
 
         else:
-            diag = QDialog(self)
-            diag.setWindowTitle("Falha ao validar usuário")
-            diag.exec()
+            MessageBox = QMessageBox(self)
+            MessageBox.setWindowTitle("Falha ao validar usuário")
+            MessageBox.exec()
     # </editor-fold>
 
 
