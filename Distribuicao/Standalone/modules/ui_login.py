@@ -25,7 +25,7 @@ class ui_Login(QMainWindow):
 
         # </editor-fold>
 
-    # <editor-fold desc="Move Window and overrring mousePressEvent">
+    # <editor-fold desc="Move Window and overwriting mousePressEvent">
     def moveWindow(self, event):
         if event.buttons() == Qt.LeftButton:
             self.move(self.pos() + event.globalPos() - self.dragPos)
