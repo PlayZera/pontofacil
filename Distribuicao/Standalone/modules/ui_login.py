@@ -6,7 +6,7 @@ from GUI.login_w import Ui_MainWindow
 from infra.connector_LogarUser import LogarUser
 from modules.ui_DiagLogIn_Sucesso import DiagLoginSucesso
 from modules.ui_DiagLogIn_Falha import DiagLoginFalha
-
+from modules.ui_page import MainWindow
 
 class ui_Login(QMainWindow):
     def __init__(self):
@@ -54,6 +54,7 @@ class ui_Login(QMainWindow):
         if logIn:
             MessageBox = DiagLoginSucesso()
             MessageBox.show()
+            MainWindow()
 
         else:
             MessageBox = DiagLoginFalha()

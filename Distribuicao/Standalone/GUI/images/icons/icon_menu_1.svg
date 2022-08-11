@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="17.894882"
+   height="17.890753"
+   viewBox="0 0 4.7346875 4.7335949"
+   version="1.1"
+   id="svg5"
+   inkscape:export-filename="icon_menu_1.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="23.860606"
+     inkscape:cx="22.631445"
+     inkscape:cy="16.135382"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-0.024,-0.02562882)">
+    <g
+       id="g28"
+       transform="matrix(0.43040229,0,0,0.67622785,-0.19093883,-1.6649408)">
+      <rect
+         fill="#1d1d1b"
+         height="1"
+         width="11"
+         x="0.5"
+         y="5.5"
+         id="rect22" />
+      <rect
+         fill="#1d1d1b"
+         height="1"
+         width="11"
+         x="0.5"
+         y="2.5"
+         id="rect24" />
+      <rect
+         fill="#1d1d1b"
+         height="1"
+         width="11"
+         x="0.5"
+         y="8.5"
+         id="rect26" />
+    </g>
+  </g>
+</svg>

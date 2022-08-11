@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16.85401"
+   height="17.361868"
+   viewBox="0 0 4.45929 4.5936608"
+   version="1.1"
+   id="svg5"
+   xml:space="preserve"
+   inkscape:export-filename="icon_timer_3.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false" /><defs
+     id="defs2" /><g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-0.19555457,-0.11066932)"><g
+       id="g291"
+       transform="matrix(0.0104922,0,0,0.01080836,-0.2607512,-0.35938625)"><g
+         id="Layer_1-7" /><g
+         id="Layer_2-1"><g
+           id="g277"><path
+             class="st0"
+             d="m 468.5,283.28 v -54.57 l -52.02,-9.8 c -4.15,-18.03 -11.27,-34.93 -20.8,-50.16 l 29.87,-43.73 -38.58,-38.58 -43.73,29.87 c -15.23,-9.53 -32.12,-16.65 -50.16,-20.8 l -9.8,-52.02 h -54.57 l -9.8,52.02 c -18.03,4.15 -34.93,11.27 -50.16,20.8 l -43.73,-29.87 -38.58,38.58 29.87,43.73 c -9.53,15.23 -16.65,32.12 -20.8,50.16 l -52.02,9.8 v 54.57 l 52.02,9.8 c 4.15,18.03 11.27,34.93 20.8,50.16 l -29.87,43.73 38.58,38.58 43.73,-29.87 c 15.23,9.53 32.12,16.65 50.16,20.8 l 9.8,52.02 h 54.57 l 9.8,-52.02 c 18.03,-4.15 34.93,-11.27 50.16,-20.8 l 43.73,29.87 38.58,-38.58 -29.87,-43.73 c 9.53,-15.23 16.65,-32.12 20.8,-50.16 z M 256,347.74 c -50.67,0 -91.74,-41.07 -91.74,-91.74 0,-50.67 41.07,-91.74 91.74,-91.74 50.67,0 91.74,41.07 91.74,91.74 0,50.67 -41.07,91.74 -91.74,91.74 z"
+             id="path275" /></g></g></g></g><style
+     type="text/css"
+     id="style9">
+	.st0{fill:#333333;}
+	.st1{fill:none;stroke:#333333;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style><style
+     type="text/css"
+     id="style272">
+	.st0{fill:#333333;}
+	.st1{fill:none;stroke:#333333;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style></svg>
