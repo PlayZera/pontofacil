@@ -1,5 +1,5 @@
 import mysql.connector
-from Distribuicao.Standalone.infra.carregarConfigs import carregarConfigs
+from infra.carregarConfigs import carregarConfigs
 
 configFile = carregarConfigs.carregar(_config='appConfi.json')
 

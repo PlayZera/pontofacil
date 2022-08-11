@@ -2,7 +2,7 @@ from PySide6.QtWidgets import QApplication, QMainWindow, QDialog, QMessageBox
 from PySide6 import QtCore
 from PySide6.QtCore import Qt
 
-from Distribuicao.Standalone.GUI.diagLoginfalha import Ui_Dialog
+from GUI.diagLoginfalha import Ui_Dialog
 
 class DiagLoginFalha(QDialog):
     def __init__(self):
