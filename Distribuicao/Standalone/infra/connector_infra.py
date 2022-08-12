@@ -1,3 +1,4 @@
+from datetime import datetime
 import mysql.connector
 from infra.carregarConfigs import carregarConfigs
 
@@ -20,4 +21,5 @@ class Connector:
             return con
 
         except:
+            print(f"{datetime.now()} - Falha ao se conectar com database")
             raise mysql.connector.DatabaseError
