@@ -1,7 +1,7 @@
 import mysql.connector
 from infra.carregarConfigs import carregarConfigs
 
-configFile = carregarConfigs.carregar(_config='appConfi.json')
+configFile = carregarConfigs.carregar(_config='appConfig.json')
 
 class Connector:
 

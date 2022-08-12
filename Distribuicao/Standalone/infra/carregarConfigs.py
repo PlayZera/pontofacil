@@ -1,11 +1,14 @@
 import json
+
+
+
 _configOut = []
 
 class carregarConfigs:
 
 
     def carregar(_config) -> list:
-        docJson = open('appConfig.json', 'r')
+        docJson = open('Distribuicao/Standalone/appConfig.json', 'r')
 
         obj = json.load(fp=docJson)
         doc = obj['connectionString'][0]
