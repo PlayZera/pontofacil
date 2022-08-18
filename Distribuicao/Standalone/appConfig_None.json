@@ -1,0 +1,11 @@
+{
+  "connectionString" :
+  [
+    {
+      "Host" : "34.151.213.239",
+      "Database" : "ponto_facil_db",
+      "User" : "root",
+      "Password" : "1nj3ct3d@"
+    }
+  ]
+}

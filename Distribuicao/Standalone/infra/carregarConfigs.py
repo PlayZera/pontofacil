@@ -1,15 +1,17 @@
+from datetime import date, datetime
 import json
-
+import os
 
 
 _configOut = []
+key = "CUSTOM_NAME_CONFIG"
 
 class carregarConfigs:
 
 
     def carregar(_config) -> list:
-        docJson = open('Distribuicao/Standalone/appConfig.json', 'r')
-
+        docJson = open(f'Distribuicao/Standalone/appConfig_{os.getenv(key)}.json', 'r')
+        print(f"{datetime.now()} - appConfig carregado appConfig_{os.getenv(key)}")
         obj = json.load(fp=docJson)
         doc = obj['connectionString'][0]
 

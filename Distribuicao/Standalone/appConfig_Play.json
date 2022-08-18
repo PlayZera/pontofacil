@@ -2,10 +2,10 @@
   "connectionString" :
   [
     {
-      "Host" : "34.151.213.239:3306",
+      "Host" : "localhost",
       "Database" : "ponto_facil_db",
       "User" : "root",
-      "Password" : "1nj3ct3d@"
+      "Password" : ""
     }
   ]
 }
