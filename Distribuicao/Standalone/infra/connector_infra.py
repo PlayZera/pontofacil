@@ -5,6 +5,8 @@ from infra.carregarConfigs import carregarConfigs
 configFile = carregarConfigs.carregar(_config='appConfig.json')
 
 class Connector:
+    def __init__(self) -> None:
+        pass
 
     def conectar():
 

@@ -2,14 +2,15 @@ import mysql.connector
 
 from infra.connector_infra import Connector
 
-class LogarUser:
+class LogarRFID:
+    
     def __init__(self) -> None:
         pass
 
-    def logarUser(user, password) -> tuple:
+    def logarUserPorRFID(rfid) -> tuple:
         con = Connector.conectar()
 
-        logarUser = f"""select * from app_user where USER_LOGIN = '{user}' and USER_PASSWORD = '{password}';"""
+        logarUser = f"""select * from app_user where RFID_USER = '{rfid}'';"""
         cursor = con.cursor()
         cursor.execute(logarUser)
         retornoBanco = cursor.fetchone()

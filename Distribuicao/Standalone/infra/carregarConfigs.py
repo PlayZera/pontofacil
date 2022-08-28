@@ -8,6 +8,8 @@ key = "CUSTOM_NAME_CONFIG"
 
 class carregarConfigs:
 
+    def __init__(self) -> None:
+        pass
 
     def carregar(_config) -> list:
         docJson = open(f'Distribuicao/Standalone/appConfig_{os.getenv(key)}.json', 'r')
