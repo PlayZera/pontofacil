@@ -8,11 +8,8 @@ key = "CUSTOM_NAME_CONFIG"
 
 class carregarConfigs:
 
-    def __init__(self) -> None:
-        pass
-
     def carregar(_config) -> list:
-        docJson = open(f'Distribuicao/Standalone/appConfig_{os.getenv(key)}.json', 'r')
+        docJson = open(f'../Standalone/appConfig_{os.getenv(key)}.json', 'r')
         print(f"{datetime.now()} - appConfig carregado appConfig_{os.getenv(key)}")
         obj = json.load(fp=docJson)
         doc = obj['connectionString'][0]

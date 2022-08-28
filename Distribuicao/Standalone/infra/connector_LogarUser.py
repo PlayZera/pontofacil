@@ -3,8 +3,6 @@ import mysql.connector
 from infra.connector_infra import Connector
 
 class LogarUser:
-    def __init__(self) -> None:
-        pass
 
     def logarUser(user, password) -> tuple:
         con = Connector.conectar()
