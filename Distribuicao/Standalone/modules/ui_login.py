@@ -1,32 +1,48 @@
-from multiprocessing.connection import wait
-from PySide6.QtWidgets import QApplication, QMainWindow, QDialog, QMessageBox
-from PySide6 import QtCore
-from PySide6.QtCore import Qt
+from ast import Lambda
+import os
+import sys
+from tkinter import messagebox
+from PySide6.QtCore import * 
+from PySide6.QtWidgets import * 
+from PySide6.QtSvgWidgets import * 
+from PySide6.QtGui import *
+import time
+import threading 
 
-from GUI.login_w import Ui_MainWindow
+##from gui.window.main_window.ui_login_window import Ui_LoginWindow
+from GUI.window.main_window.ui_login_window import Ui_LoginWindow
+from infra.carregarConfigs import carregarConfigs
 from infra.connector_LogarUser import LogarUser
+from modules.Context import Context
 from modules.ui_DiagLogIn_Sucesso import DiagLoginSucesso
 from modules.ui_DiagLogIn_Falha import DiagLoginFalha
-from modules.ui_page import MainWindow
-from modules.Context import Context
+from GUI.window.menu import MainWindow
 
-class ui_Login(QMainWindow):
+
+class LoginWindow(QMainWindow):
     def __init__(self):
-        super(ui_Login, self).__init__()
-        self.ui = Ui_MainWindow()
+        super().__init__()
+
+        self.ui = Ui_LoginWindow()
         self.ui.setupUi(self)
-        self.ui.tittle_bar.mouseMoveEvent = self.moveWindow
-        self.ui.button_close.clicked.connect(self.closeWindow)
-        self.ui.button_minimize.clicked.connect(self.minimizeWindow)
-        self.ui.btn_login.clicked.connect(self.loginUser)
 
-#region Window Default Config
+        # Remoção da Title Bar Padrão do Windows
+        self.setWindowFlags(Qt.WindowType.FramelessWindowHint)
 
-            #essas configs removem a barra do Windows
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
-        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        # Acões dos Botões
+        self.ui.pushButton_min.clicked.connect(self.minimizeWindow)
+        self.ui.pushButton_close.clicked.connect(self.closeWindow)
+        self.ui.frame_top.mouseMoveEvent = self.moveWindow
+        self.ui.pushButton_login.clicked.connect(self.loginUser)
 
-#region Move Window and overwriting mousePressEvent
+        self.show()
+
+    def closeWindow(self):
+        self.close()
+        exit()
+
+    def minimizeWindow(self):
+        self.showMinimized()
 
     def moveWindow(self, event):
         if event.buttons() == Qt.LeftButton:
@@ -37,29 +53,22 @@ class ui_Login(QMainWindow):
     def mousePressEvent(self, event):
         self.dragPos = event.globalPos()
 
-#region Buttons actions
-
-    def closeWindow(self):
-        self.close()
-        exit()
-
-    def minimizeWindow(self):
-        self.showMinimized()
-
     def loginUser(self):
-        user = self.ui.user_login.text()
-        password = self.ui.pass_login.text()
+        t_1 = 2
+        user = self.ui.lineEdit_usuario.text()
+        password = self.ui.lineEdit_senha.text()
 
         logIn = LogarUser.logarUser(user, password)
 
         if logIn:
+            MessageBox = DiagLoginSucesso()
             Context.set_User(self, logIn[1])
             Context.set_TypeUser(self, logIn[3])
             print(Context.userRet)
             print(Context.typeUserRet)
-            MessageBox = DiagLoginSucesso()
-            MessageBox.show()
+
             MainWindow()
+            self.close()
 
         else:
             MessageBox = DiagLoginFalha()
@@ -67,5 +76,7 @@ class ui_Login(QMainWindow):
 
 
 
-
-
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = LoginWindow()
+    sys.exit(app.exec())

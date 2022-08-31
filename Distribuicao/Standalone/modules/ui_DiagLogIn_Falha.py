@@ -2,15 +2,15 @@ from PySide6.QtWidgets import QApplication, QMainWindow, QDialog, QMessageBox
 from PySide6 import QtCore
 from PySide6.QtCore import Qt
 
-from GUI.diagLoginfalha import Ui_Dialog
+from GUI.window.diagLoginfalha import Ui_Dialog
 
 class DiagLoginFalha(QDialog):
     def __init__(self):
         super(DiagLoginFalha, self).__init__()
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
-        self.ui.tittle_bar.mouseMoveEvent = self.moveWindow
-        self.ui.pushButton.clicked.connect(self.fecharDiag)
+        self.ui.frame_content.mouseMoveEvent = self.moveWindow
+        self.ui.pushButton_close_2.clicked.connect(self.fecharDiag)
 
         # <editor-fold desc="Window Default Config">
         # essas configs removem a barra do Windows
