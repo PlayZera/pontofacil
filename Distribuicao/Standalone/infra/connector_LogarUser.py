@@ -1,6 +1,6 @@
 import mysql.connector
 
-from infra.connector_infra import Connector
+from Distribuicao.Standalone.infra.connector_infra import Connector
 
 class LogarUser:
 

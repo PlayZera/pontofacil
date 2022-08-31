@@ -11,7 +11,7 @@ from PySide6.QtSvgWidgets import *
 from PySide6.QtWidgets import * 
 
 # IMPORT MAIN WINDOW
-from GUI.window.main_window.ui_main_window import Ui_MainWindow
+from Distribuicao.Standalone.GUI.window.main_window.ui_main_window import Ui_MainWindow
 
 # MAIN WINDOW
 class MainWindow(QMainWindow):

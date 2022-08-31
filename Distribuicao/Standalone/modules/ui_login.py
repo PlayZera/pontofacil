@@ -3,12 +3,12 @@ from PySide6.QtWidgets import QApplication, QMainWindow, QDialog, QMessageBox
 from PySide6 import QtCore
 from PySide6.QtCore import Qt
 
-from GUI.login_w import Ui_MainWindow
-from infra.connector_LogarUser import LogarUser
-from modules.ui_DiagLogIn_Sucesso import DiagLoginSucesso
-from modules.ui_DiagLogIn_Falha import DiagLoginFalha
-from modules.ui_page import MainWindow
-from modules.Context import Context
+from Distribuicao.Standalone.GUI.login_w import Ui_MainWindow
+from Distribuicao.Standalone.infra.connector_LogarUser import LogarUser
+from Distribuicao.Standalone.modules.ui_DiagLogIn_Sucesso import DiagLoginSucesso
+from Distribuicao.Standalone.modules.ui_DiagLogIn_Falha import DiagLoginFalha
+from Distribuicao.Standalone.modules.ui_page import MainWindow
+from Distribuicao.Standalone.modules.Context import Context
 
 class ui_Login(QMainWindow):
     def __init__(self):
