@@ -49,17 +49,13 @@ class ui_Login(QMainWindow):
     def loginUser(self):
         user = self.ui.user_login.text()
         password = self.ui.pass_login.text()
-
         logIn = LogarUser.logarUser(user, password)
 
         if logIn:
-            Context.set_User(self, logIn[1])
-            Context.set_TypeUser(self, logIn[3])
-            print(Context.userRet)
-            print(Context.typeUserRet)
+            contexto = Context(logIn)
             MessageBox = DiagLoginSucesso()
             MessageBox.show()
-            MainWindow()
+            MainWindow(contexto)
 
         else:
             MessageBox = DiagLoginFalha()
