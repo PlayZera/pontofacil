@@ -11,11 +11,20 @@ from PySide6.QtSvgWidgets import *
 from PySide6.QtWidgets import * 
 
 # IMPORT MAIN WINDOW
-from GUI.window.main_window.ui_main_window import Ui_MainWindow
+from Distribuicao.Standalone.GUI.window.main_window.ui_main_window import Ui_MainWindow
+from Distribuicao.Standalone.modules.Context import Context
 
 # MAIN WINDOW
-class MainWindow(QMainWindow):
-    def __init__(self):
+class MainWindow(QMainWindow, Context):
+
+    def __init__(self, Context):
+        self.id_User = Context.id_User
+        self.nome_User = Context.nome_User
+        self.senha_User = Context.senha_User
+        self.tipo_User = Context.tipo_User
+        self.uid_User = Context.uid_User
+        self.usuario_User = Context.usuario_User
+
         super().__init__()
 
         self.setWindowFlags(Qt.WindowType.FramelessWindowHint)
@@ -118,8 +127,3 @@ class MainWindow(QMainWindow):
         self.animation.setEasingCurve(QEasingCurve.InOutCirc)
         self.animation.setDuration(500)
         self.animation.start()
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    sys.exit(app.exec())
