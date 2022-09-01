@@ -16,7 +16,7 @@ from infra.connector_LogarUser import LogarUser
 from modules.Context import Context
 from modules.ui_DiagLogIn_Sucesso import DiagLoginSucesso
 from modules.ui_DiagLogIn_Falha import DiagLoginFalha
-from GUI.window.menu import MainWindow
+from modules.ui_page import MainWindow
 
 
 class LoginWindow(QMainWindow):
@@ -62,12 +62,8 @@ class LoginWindow(QMainWindow):
 
         if logIn:
             MessageBox = DiagLoginSucesso()
-            Context.set_User(self, logIn[1])
-            Context.set_TypeUser(self, logIn[3])
-            print(Context.userRet)
-            print(Context.typeUserRet)
-
-            MainWindow()
+            contexto = Context(logIn)
+            MainWindow(contexto)
             self.close()
 
         else:

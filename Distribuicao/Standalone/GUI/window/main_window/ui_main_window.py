@@ -13,11 +13,11 @@ from PySide6.QtGui import *
 from PySide6.QtSvgWidgets import * 
 
 # IMPORT PAGES
-from Distribuicao.Standalone.GUI.page import Ui_application_pages
+from GUI.page import Ui_application_pages
 
 # IMPORT CUSTOM WIDGETS
-from Distribuicao.Standalone.GUI.widgets.py_push_Button import PyPushButton
-from Distribuicao.Standalone.GUI.widgets.py_push_Button import PyTitleButton
+from GUI.widgets.py_push_Button import PyPushButton
+from GUI.widgets.py_push_Button import PyTitleButton
 
 
 
