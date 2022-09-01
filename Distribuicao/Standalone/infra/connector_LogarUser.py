@@ -6,7 +6,7 @@ class LogarUser:
     def logarUser(user, password) -> tuple:
         con = Connector.conectar()
 
-        logarUser = f"""select * from app_user where USER_NAME = '{user}' and USER_PASSWORD = '{password}';"""
+        logarUser = f"""select * from app_user where USER_LOGIN = '{user}' and USER_PASSWORD = '{password}';"""
         cursor = con.cursor()
         cursor.execute(logarUser)
         retornoBanco = cursor.fetchone()
