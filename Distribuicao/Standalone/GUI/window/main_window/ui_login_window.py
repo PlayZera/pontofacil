@@ -24,7 +24,6 @@ class Ui_LoginWindow(object):
             Frame.setObjectName(u"Frame")
         Frame.resize(479, 494)
         Frame.setMinimumSize(QSize(479, 494))
-        Frame.setMaximumSize(QSize(479, 494))
         Frame.setSizeIncrement(QSize(400, 420))
         self.verticalLayoutWidget = QWidget(Frame)
         self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")

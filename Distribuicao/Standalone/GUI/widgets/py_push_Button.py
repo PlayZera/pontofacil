@@ -116,6 +116,7 @@ class PyTitleButton(QPushButton):
         # Painter
         
         qp = QPainter()
+        qp.device()
         qp.begin(self)
         qp.setRenderHint(QPainter.Antialiasing)
         qp.setPen(Qt.NoPen)
@@ -254,6 +255,7 @@ class PyPushButton(QPushButton):
         # Painter
         
         qp = QPainter()
+        qp.device()
         qp.begin(self)
         qp.setRenderHint(QPainter.Antialiasing)
         qp.setPen(Qt.NoPen)
