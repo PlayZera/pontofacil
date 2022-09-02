@@ -28,4 +28,11 @@ class Calls:
             
         except:
             print("Falha ao se comunicar com o Banco de dados")               
-            return "Falha ao se comunicar com o Banco de dados"               
+            return "Falha ao se comunicar com o Banco de dados"
+
+    @app.route("/MakePointRFID", methods=["POST"])
+
+    def marcarPontoRFID():
+        body = request.get_json()
+        
+        rfid = body.get("RFID")
