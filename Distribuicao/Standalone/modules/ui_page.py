@@ -14,6 +14,8 @@ from PySide6.QtWidgets import *
 from GUI.window.main_window.ui_main_window import Ui_MainWindow
 from modules.Context import Context
 
+GLOBAL_STATE = 0
+
 # MAIN WINDOW
 class MainWindow(QMainWindow, Context):
 
@@ -28,7 +30,8 @@ class MainWindow(QMainWindow, Context):
         super().__init__()
 
         self.setWindowFlags(Qt.WindowType.FramelessWindowHint)
-        
+
+
         # Configuração da Janela Principal
         self.ui = Ui_MainWindow()
         self.ui.setup_ui(self)
@@ -54,10 +57,24 @@ class MainWindow(QMainWindow, Context):
 
         # ============ Contexto de usuário em sessão ================
         self.ui.ui_pages.label_2.setText(QCoreApplication.translate("application_pages", u"Bem-Vindo "+self.nome_User, None))
-
+        self.showNormal
 
         # Exibe a Aplicação
         self.show()
+
+    def maximizeWindow(self):
+
+        global GLOBAL_STATE
+        status = GLOBAL_STATE
+
+        #Caso não esteja Maximizado>
+        if status == 0:
+            self.showMaximized()
+            GLOBAL_STATE = 1
+
+        else: 
+            GLOBAL_STATE = 0
+            self.showNormal()
 
     def resizewindow(self):
         self.adjustSize()
@@ -69,8 +86,6 @@ class MainWindow(QMainWindow, Context):
     def minimizeWindow(self):
         self.showMinimized()
 
-    def maximizeWindow(self):
-        self.showMaximized()
 
     def moveWindow(self, event):
         if event.buttons() == Qt.LeftButton:
