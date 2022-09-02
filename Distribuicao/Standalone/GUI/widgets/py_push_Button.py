@@ -138,6 +138,7 @@ class PyTitleButton(QPushButton):
         # Draw Icon
         icon = QPixmap(icon_path)
         painter = QPainter(icon)
+        painter.device()
         painter.setCompositionMode(QPainter.CompositionMode_SourceIn)
         painter.fillRect(icon.rect(), color)
         qp.drawPixmap(
@@ -277,6 +278,7 @@ class PyPushButton(QPushButton):
         # Draw Icon
         icon = QPixmap(icon_path)
         painter = QPainter(icon)
+        painter.device()
         painter.setCompositionMode(QPainter.CompositionMode_SourceIn)
         painter.fillRect(icon.rect(), color)
         qp.drawPixmap(
@@ -394,6 +396,7 @@ class PyLoginButtons(QPushButton):
         # Painter
         
         qp = QPainter()
+        qp.device()
         qp.begin(self)
         qp.setRenderHint(QPainter.Antialiasing)
         qp.setPen(Qt.NoPen)
@@ -415,6 +418,7 @@ class PyLoginButtons(QPushButton):
         # Draw Icon
         icon = QPixmap(icon_path)
         painter = QPainter(icon)
+        painter.device()
         painter.setCompositionMode(QPainter.CompositionMode_SourceIn)
         painter.fillRect(icon.rect(), color)
         qp.drawPixmap(
