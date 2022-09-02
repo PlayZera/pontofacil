@@ -52,6 +52,10 @@ class MainWindow(QMainWindow, Context):
         self.ui.top_bar.mouseMoveEvent = self.moveWindow
         self.ui.central_frame.mouseGrabber = self.resizewindow
 
+        # ============ Contexto de usuário em sessão ================
+        self.ui.ui_pages.label_2.setText(QCoreApplication.translate("application_pages", u"Bem-Vindo "+self.nome_User, None))
+
+
         # Exibe a Aplicação
         self.show()
 

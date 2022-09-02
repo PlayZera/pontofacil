@@ -105,7 +105,7 @@ class Ui_application_pages():
 
     def retranslateUi(self, application_pages):
         application_pages.setWindowTitle(QCoreApplication.translate("application_pages", u"StackedWidget", None))
-        self.label_2.setText(QCoreApplication.translate("application_pages", u"Bem-Vindo {user}", None))
+        self.label_2.setText(QCoreApplication.translate("application_pages", u"Bem-Vindo", None))
         self.label_3.setText(QCoreApplication.translate("application_pages", u"Hora do Ponto", None))
         self.label.setText(QCoreApplication.translate("application_pages", u"Chat Box", None))
         self.label_4.setText(QCoreApplication.translate("application_pages", u"Perfil", None))

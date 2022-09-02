@@ -4,11 +4,11 @@ import os
 
 
 _configOut = []
-key = "None"
+key = "CUSTOM_NAME_CONFIG"
 
 class carregarConfigs:
 
-    ## C:\Users\lucas\Desktop\PontoFacil\gui\infra\appConfig_cliente.json
+    #configurar variável de ambiente no windows
 
     def carregar(_config) -> list:
         docJson = open(f'Distribuicao/Standalone/appConfig_{os.getenv(key)}.json', 'r')
