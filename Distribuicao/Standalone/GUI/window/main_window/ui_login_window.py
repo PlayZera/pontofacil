@@ -38,7 +38,7 @@ class Ui_LoginWindow(object):
         self.frame_top.setFrameShadow(QFrame.Raised)
         self.label_login = QLabel(self.frame_top)
         self.label_login.setObjectName(u"label_login")
-        self.label_login.setGeometry(QRect(20, 10, 101, 21))
+        self.label_login.setGeometry(QRect(20, 10, 141, 21))
         font = QFont()
         font.setFamilies([u"Uni Sans"])
         font.setPointSize(16)
@@ -131,7 +131,7 @@ class Ui_LoginWindow(object):
          # LineEdit == Usuario
         self.lineEdit_usuario = QLineEdit(self.frame_content)
         self.lineEdit_usuario.setObjectName(u"lineEdit_usuario")
-        self.lineEdit_usuario.setGeometry(QRect(130, 250, 241, 31))
+        self.lineEdit_usuario.setGeometry(QRect(130, 235, 241, 31))
         font3 = QFont()
         font3.setFamilies([u"Uni Sans"])
         font3.setPointSize(10)
@@ -162,7 +162,7 @@ class Ui_LoginWindow(object):
         # LineEdit == Senha
         self.lineEdit_senha = QLineEdit(self.frame_content)
         self.lineEdit_senha.setObjectName(u"lineEdit_senha")
-        self.lineEdit_senha.setGeometry(QRect(130, 303, 241, 31))
+        self.lineEdit_senha.setGeometry(QRect(130, 290, 241, 31))
         font2 = QFont()
         font2.setPointSize(10)
         self.lineEdit_senha.setFont(font_a)
@@ -236,7 +236,7 @@ class Ui_LoginWindow(object):
 
     def retranslateUi(self, Frame):
         Frame.setWindowTitle(QCoreApplication.translate("Frame", u"Frame", None))
-        self.label_login.setText(QCoreApplication.translate("Frame", u"Login", None))
+        self.label_login.setText(QCoreApplication.translate("Frame", u"PONTO FÁCIL", None))
         self.pushButton_close.setText("")
         self.pushButton_min.setText("")
         self.pushButton_login.setText(QCoreApplication.translate("Frame", u"LOGIN", None))
