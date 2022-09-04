@@ -38,7 +38,7 @@ class Ui_LoginWindow(object):
         self.frame_top.setFrameShadow(QFrame.Raised)
         self.label_login = QLabel(self.frame_top)
         self.label_login.setObjectName(u"label_login")
-        self.label_login.setGeometry(QRect(20, 10, 101, 21))
+        self.label_login.setGeometry(QRect(20, 10, 141, 21))
         font = QFont()
         font.setFamilies([u"Uni Sans"])
         font.setPointSize(16)
@@ -53,7 +53,21 @@ class Ui_LoginWindow(object):
         self.pushButton_close.setMouseTracking(False)
         self.pushButton_close.setStyleSheet(u"")
         self.pushButton_close.setIcon(QIcon("Distribuicao/Standalone/GUI/images/login_icons/icon_close.svg"))
+        self.pushButton_close.setStyleSheet("""
+                    QPushButton{
+                        color: white;
+                        background-color: #21252b;
+                        border: none;
+                     }
+                    QPushButton:hover {
+                        background-color: #6F1313;
+                     }
+                     """
+                     )
 
+
+
+     
 
         # Botão de Minimizar
         self.pushButton_min = QPushButton(self.frame_top)
@@ -61,6 +75,17 @@ class Ui_LoginWindow(object):
         self.pushButton_min.setGeometry(QRect(422, 3, 31, 31))
         self.pushButton_min.setStyleSheet(u"")
         self.pushButton_min.setIcon(QIcon("Distribuicao/Standalone/GUI/images/login_icons/icon_min.svg"))
+        self.pushButton_min.setStyleSheet("""
+                    QPushButton{
+                        color: white;
+                        background-color: #21252b;
+                        border: none;
+                     }
+                    QPushButton:hover {
+                        background-color: #282c34;
+                     }
+                     """
+                     )
 
         self.verticalLayout.addWidget(self.frame_top)
 
@@ -85,7 +110,16 @@ class Ui_LoginWindow(object):
         font1.setPointSize(12)
         font1.setBold(True)
         self.pushButton_login.setFont(font1)
-        self.pushButton_login.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.pushButton_login.setStyleSheet("""
+                QPushButton{
+                    color: white;
+                    background-color: #282c34;
+                    }
+                QPushButton:hover {
+                    background-color: #2C3139;
+                    }
+                """
+                )
 
 
         # Configuração da Fonte:
@@ -97,7 +131,7 @@ class Ui_LoginWindow(object):
          # LineEdit == Usuario
         self.lineEdit_usuario = QLineEdit(self.frame_content)
         self.lineEdit_usuario.setObjectName(u"lineEdit_usuario")
-        self.lineEdit_usuario.setGeometry(QRect(130, 250, 241, 31))
+        self.lineEdit_usuario.setGeometry(QRect(130, 235, 241, 31))
         font3 = QFont()
         font3.setFamilies([u"Uni Sans"])
         font3.setPointSize(10)
@@ -105,17 +139,55 @@ class Ui_LoginWindow(object):
         self.lineEdit_usuario.setFont(font_a)
         self.lineEdit_usuario.setLayoutDirection(Qt.LeftToRight)
         self.lineEdit_usuario.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.lineEdit_usuario.setAlignment(Qt.AlignHCenter)
+
+        self.lineEdit_usuario.setPlaceholderText("Usuário")
+        self.lineEdit_usuario.setStyleSheet("""
+                QLineEdit{
+                    color: white;
+                    background-color: #262931;
+                    border-top: none;
+                    border-bottom: 2px solid #505258;
+                    }
+                
+
+                QLineEdit:hover {
+                    background-color: #2B2E37;
+                    }
+                """
+                )
+
 
 
         # LineEdit == Senha
         self.lineEdit_senha = QLineEdit(self.frame_content)
         self.lineEdit_senha.setObjectName(u"lineEdit_senha")
-        self.lineEdit_senha.setGeometry(QRect(130, 303, 241, 31))
+        self.lineEdit_senha.setGeometry(QRect(130, 290, 241, 31))
         font2 = QFont()
         font2.setPointSize(10)
         self.lineEdit_senha.setFont(font_a)
-        self.lineEdit_senha.setStyleSheet(u"color: rgb(255, 255, 255);")
+
+        self.lineEdit_senha.setPlaceholderText("Senha")
+        self.lineEdit_senha.setStyleSheet("""
+                QLineEdit{
+                    color: white;
+                    background-color: #262931;
+                    border-top: none;
+                    border-bottom: 2px solid #505258;
+                    }
+            
+
+                QLineEdit:hover {
+                    background-color: #2B2E37;
+                    }
+                """
+                )
+   
+
         self.lineEdit_senha.setEchoMode(QLineEdit.Password)
+        self.lineEdit_senha.setAlignment(Qt.AlignHCenter)
+        
+
 
         #  ========== FOTO DA EMPRESA ========== #
         self.label_logo = QLabel(self.frame_content)
@@ -124,16 +196,6 @@ class Ui_LoginWindow(object):
         self.label_logo.setAlignment(Qt.AlignCenter)
         self.label_logo.setPixmap(QPixmap("Distribuicao/Standalone/GUI/images/login_icons/logo_solved.svg"))
 
-        self.label_senha = QLabel(self.frame_content)
-        self.label_senha.setObjectName(u"label_senha")
-        self.label_senha.setGeometry(QRect(69, 307, 61, 21))
-        self.label_senha.setFont(font1)
-        self.label_senha.setStyleSheet(u"color: rgb(255, 255, 255);")
-        self.label_usuario = QLabel(self.frame_content)
-        self.label_usuario.setObjectName(u"label_usuario")
-        self.label_usuario.setGeometry(QRect(52, 256, 71, 21))
-        self.label_usuario.setFont(font1)
-        self.label_usuario.setStyleSheet(u"color: rgb(255, 255, 255);")
 
         self.verticalLayout_2.addWidget(self.frame_content)
 
@@ -149,6 +211,7 @@ class Ui_LoginWindow(object):
         self.frame_button.setStyleSheet(u"background-color: rgb(33, 37, 43);")
         self.frame_button.setFrameShape(QFrame.StyledPanel)
         self.frame_button.setFrameShadow(QFrame.Raised)
+
         self.label_buttonsoft = QLabel(self.frame_button)
         self.label_buttonsoft.setObjectName(u"label_buttonsoft")
         self.label_buttonsoft.setGeometry(QRect(20, 3, 131, 16))
@@ -173,15 +236,13 @@ class Ui_LoginWindow(object):
 
     def retranslateUi(self, Frame):
         Frame.setWindowTitle(QCoreApplication.translate("Frame", u"Frame", None))
-        self.label_login.setText(QCoreApplication.translate("Frame", u"Login", None))
+        self.label_login.setText(QCoreApplication.translate("Frame", u"PONTO FÁCIL", None))
         self.pushButton_close.setText("")
         self.pushButton_min.setText("")
         self.pushButton_login.setText(QCoreApplication.translate("Frame", u"LOGIN", None))
         self.lineEdit_usuario.setText("")
         self.lineEdit_senha.setText("")
         self.label_logo.setText("")
-        self.label_senha.setText(QCoreApplication.translate("Frame", u"SENHA:", None))
-        self.label_usuario.setText(QCoreApplication.translate("Frame", u"USU\u00c1RIO:", None))
         self.label_buttonsoft.setText(QCoreApplication.translate("Frame", u"SolvedBySoftware\u2122", None))
         self.label_buttondate.setText(QCoreApplication.translate("Frame", u"\u00a9 2022", None))
     # retranslateUi

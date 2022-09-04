@@ -18,6 +18,7 @@ from GUI.page import Ui_application_pages
 # IMPORT CUSTOM WIDGETS
 from GUI.widgets.py_push_Button import PyPushButton
 from GUI.widgets.py_push_Button import PyTitleButton
+from GUI.widgets.py_push_Button import PyCloseButton
 
 
 
@@ -121,7 +122,7 @@ class Ui_MainWindow(object):
         self.left_menu_button_layout.addWidget(self.settings_button)
 
         # Label Versão da Aplicação
-        self.left_menu_label_version = QLabel("v1.0.3")
+        self.left_menu_label_version = QLabel("v1.0.0")
         self.left_menu_label_version.setStyleSheet("font: 'Segoe UI'; color:#eeeee4")
         self.left_menu_label_version.setAlignment(Qt.AlignCenter)
         self.left_menu_label_version.setMinimumHeight(30)
@@ -170,7 +171,7 @@ class Ui_MainWindow(object):
             icon_path = "icon_max.svg"
 
         )
-        self.btn_close = PyTitleButton(
+        self.btn_close = PyCloseButton(
             icon_path = "icon_close.svg"
 
         )
