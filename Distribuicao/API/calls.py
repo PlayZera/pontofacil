@@ -6,7 +6,7 @@ from Distribuicao.Standalone.modules.Context import Context
 
 app = Flask("API_PontoSimples")
 
-class Calls(LogarRFID, MarcaPontoRFID, Context):
+class Calls:
 
     def run():
         app.run(host="0.0.0.0",
