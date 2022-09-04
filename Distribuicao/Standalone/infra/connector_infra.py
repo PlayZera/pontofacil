@@ -1,7 +1,7 @@
 from datetime import datetime
 import mysql.connector
 
-from infra.carregarConfigs import carregarConfigs
+from Distribuicao.Standalone.infra.carregarConfigs import carregarConfigs
 
 configFile = carregarConfigs.carregar(_config='appConfig.json')
 

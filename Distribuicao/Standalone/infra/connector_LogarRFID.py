@@ -1,5 +1,3 @@
-import mysql.connector
-
 from Distribuicao.Standalone.infra.connector_infra import Connector
 
 class LogarRFID:
