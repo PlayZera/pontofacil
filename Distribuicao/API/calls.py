@@ -44,7 +44,7 @@ class Calls:
 
             if(logIn):
                 contexto = Context(logIn)
-                print(f"{datetime.now()} - Usário {contexto.nome_User} logado com sucesso")
+                print(f"{datetime.now()} - Usuário {contexto.nome_User} logado com sucesso")
                 pontoMarcado = MarcaPontoRFID(contexto)
                 pontoMarcado.marcarPonto()
                 return f"Ponto registrado para {contexto.nome_User}"
